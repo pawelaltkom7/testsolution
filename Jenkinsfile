@@ -10,28 +10,28 @@ pipeline {
                         branch 'main'
                     }
                     steps{
-                        echo " check ${Main_Branch}"
+                        echo "${Main_Branch}"
                     }
             }
         }
         stage('TestCode') {
             steps {
-                
+                echo ""
             }
         }
         stage('RunCode') {
             steps {
-                
+                echo ""
             }
         }
         stage('BuildImage') {
             steps {
-               
+               echo ""
             }
         }
         stage('PushImage') {
             steps {
-                
+                echo ""
             }
         }
     }
