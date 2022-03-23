@@ -10,9 +10,8 @@ pipeline {
                         branch 'main'
                     }
                     steps{
-                        echo "${Main_Branch}"
+                        echo " check ${Main_Branch}"
                     }
-
             }
         }
         stage('TestCode') {
