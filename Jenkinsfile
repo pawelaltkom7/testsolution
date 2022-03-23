@@ -24,7 +24,8 @@ pipeline {
         }
         stage('BuildImage') {
             steps {
-               bat "docker build ."
+               bat "docker build -t 'jenkinspf:latest' ."
+               bat "docker run jenkinspf:latest"
             }
         }
         stage('PushImage') {
