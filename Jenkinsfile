@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        Main_Branch = "Welcome in the main branch!"
+        python = "C:\\\\Users\\Student\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
     }
     stages {
         stage('ScriptTest') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('TestCode') {
             steps {
-                bat "python -m pytest"
+                bat "${python} -m pytest"
             }
         }
         stage('RunCode') {
