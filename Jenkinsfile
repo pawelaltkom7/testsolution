@@ -10,6 +10,7 @@ pipeline {
                     def a = "ala ma kota"
                     println a
                 }
+            }
         }
         stage('TestCode') {
             steps {
