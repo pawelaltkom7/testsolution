@@ -1,25 +1,38 @@
 pipeline {
     agent any
-
+    environment {
+        Main_Branch = "Welcome in the main branch!"
+    }
     stages {
-        stage('Build') {
+        stage('CheckBranch') {
             steps {
-                echo 'Building..'
+                when {
+                        branch 'main'
+                    }
+                    steps{
+                        echo "${Main_Branch}"
+                    }
+
             }
         }
-        stage('Test') {
+        stage('TestCode') {
             steps {
-                echo 'Testing..'
+                
             }
         }
-        stage('Deploy') {
+        stage('RunCode') {
             steps {
-                echo 'Deploying....'
+                
             }
         }
-        stage('PawelStage') {
+        stage('BuildImage') {
             steps {
-                echo pupa
+               
+            }
+        }
+        stage('PushImage') {
+            steps {
+                
             }
         }
     }
