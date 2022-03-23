@@ -6,13 +6,14 @@ pipeline {
     stages {
         stage('CheckBranch') {
             steps {
+                script{
                 when {
                         branch 'main'
                     }
                     steps{
                         echo "${Main_Branch}"
                     }
-            }
+            }}
         }
         stage('TestCode') {
             steps {
