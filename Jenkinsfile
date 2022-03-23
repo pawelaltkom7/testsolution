@@ -14,7 +14,7 @@ pipeline {
         }
         stage('TestCode') {
             steps {
-                bat "pytest"
+                bat "python -m pytest"
             }
         }
         stage('RunCode') {
