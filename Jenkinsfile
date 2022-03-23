@@ -17,5 +17,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('PawelStage') {
+            steps {
+                echo pupa
+            }
+        }
     }
 }
