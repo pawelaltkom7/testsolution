@@ -19,12 +19,12 @@ pipeline {
         }
         stage('RunCode') {
             steps {
-                echo ""
+                bat "${python} main.py"
             }
         }
         stage('BuildImage') {
             steps {
-               echo ""
+               bat "docker build ."
             }
         }
         stage('PushImage') {
