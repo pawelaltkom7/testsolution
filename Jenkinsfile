@@ -30,7 +30,8 @@ pipeline {
         }
         stage('PushImage') {
             steps {
-                echo ""
+                bat "docker tag jenkinspf:latest pawelaltkom7/demo:fromjenkinspipeline"
+                bat "docker push pawelaltkom7/demo:fromjenkinspipeline"
             }
         }
     }
