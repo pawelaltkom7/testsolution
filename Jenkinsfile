@@ -4,16 +4,12 @@ pipeline {
         Main_Branch = "Welcome in the main branch!"
     }
     stages {
-        stage('CheckBranch') {
+        stage('ScriptTest') {
             steps {
                 script{
-                when {
-                        branch 'main'
-                    }
-                    steps{
-                        echo "${Main_Branch}"
-                    }
-            }}
+                    def a = "ala ma kota"
+                    println a
+                }
         }
         stage('TestCode') {
             steps {
