@@ -14,7 +14,7 @@ pipeline {
         }
         stage('TestCode') {
             steps {
-                echo ""
+                bat "pytest"
             }
         }
         stage('RunCode') {
